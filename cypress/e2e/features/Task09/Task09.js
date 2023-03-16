@@ -14,7 +14,7 @@ When('I click the Horizontal Slider it shoul open Horizontal Slider Page',()=>{
 })
  Then('I should move the slider till value 3.5',()=>{
 
-    cy.get('input[type="range"]').invoke('val','3.5').trigger('input')
+    cy.get('input[type="range"]').invoke('val','3.5').trigger('change')
     cy.wait(1000)
     cy.get('#range').should('have.text',"3.5").should('be.visible')
    
