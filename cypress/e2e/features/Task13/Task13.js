@@ -10,7 +10,8 @@ When('I click on Notification Message and it should open notification message pa
 
 })
    Then('Get the notification message available on the page',()=>{
-   cy.get('#flash').should('contain',"Action unsuccesful")
+    cy.wait(3000)
+   cy.get('#flash').should('contain','Action successful')
 
 
  })

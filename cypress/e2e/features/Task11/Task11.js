@@ -33,14 +33,14 @@ When('I click on the Jsalert2',()=>{
     cy.visit("https://the-internet.herokuapp.com/javascript_alerts")
         
     cy.window().then((win)=>{
-    cy.stub(win,'prompt').returns('welcome');
+    cy.stub(win,'prompt').returns('GuptaJi');
     })
 
   cy.get("button[onclick='jsPrompt()']").click()
 
   //cy.on('window:confirm',()=>false)  //cypress closed window by using cancel button
 
-  cy.get("#result").should('have.text','You entered: welcome')
+  cy.get("#result").should('have.text','You entered: GuptaJi')
 
   }) 
 
